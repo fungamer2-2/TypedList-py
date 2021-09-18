@@ -1,7 +1,10 @@
 from collections.abc import MutableSequence
 
 class TypedList:
-    "Creates a class which creates instances of a typed list"
+    """Creates a class which creates instances of a typed list
+    
+    Lists created from these classes will only accept values of the given type and will raise TypeError if you try to add values of a type other than the given type.
+    """
     
     def __new__(cls, typ):
         if not isinstance(typ, type):
