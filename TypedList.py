@@ -49,7 +49,7 @@ class TypedList:
                 return str(self._data)
                 
             def __repr__(self):
-                return "%s(%s)(%s)" % ("TypedList", self._type.__name__, self._data)
+                return f"<TypedList '{self._type.__name__}', {self._data}>"
                 
         return TypedListImpl
         
