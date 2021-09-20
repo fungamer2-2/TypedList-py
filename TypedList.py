@@ -48,6 +48,9 @@ class TypedList:
                 self._type_check(value)
                 self._data.insert(index, value)
                 
+            def sort(self, key=None, reverse=False):
+                self._data.sort(key=key, reverse=reverse)
+                
             def __str__(self):
                 return str(self._data)
                 
