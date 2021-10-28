@@ -5,6 +5,7 @@ class TypedList:
     
     Lists created from these classes will only accept values of the given type and will raise TypeError if you try to add values of a type other than the given type.
     """
+    __slots__ = ()
     
     def __new__(cls, typ):
         if not isinstance(typ, type):
