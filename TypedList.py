@@ -12,6 +12,7 @@ class TypedList:
         
         class TypedListImpl(MutableSequence):
             __doc__ = f"A list which only accepts values of type '{typ.__name__}'"
+            __slots__ = ("_type", "_data")
             
             def __init__(self, sequence=[]):
                 self._type = typ
